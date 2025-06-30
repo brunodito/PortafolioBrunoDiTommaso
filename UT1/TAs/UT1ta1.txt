@@ -1,0 +1,32 @@
+UT1
+Ejercicio 2-
+
+Ej1:
+a- int result = 3
+b- result -= 1
+c- result *= 2
+d- result /= 2
+e- (result += 8) % 7
+
+Ej2:
+a = 5 + 4
+
+Ej3:
+4
+5
+6
+6
+7
+
+Ejercicio 3-
+1b
+2a
+3d
+4c
+
+Ejercicio 4-
+
+
+
+
+

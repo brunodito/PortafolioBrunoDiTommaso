@@ -1,0 +1,25 @@
+Predecir(string unPrefijo) → LinkedList
+COM
+    unaLista ← nueva LinkedList
+    nodoPalabra ← raiz.buscar(unPrefijo)
+
+    Si nodoPalabra == 0 entonces
+        devolver unaLista
+    Sino
+        devolver nodoPalabra.Predecir(unPrefijo, unaLista)
+    Fin si
+FIN
+
+
+Predecir(string unPrefijo, LinkedList unaLista)
+COM
+    Si nodoActual <> nulo entonces
+        Si nodoActual.esFinDePalabra entonces
+            unaLista.agregar(unPrefijo)
+        Fin si
+
+        Para cada hijo de nodoActual hacer
+            hijo.Predecir(unPrefijo + hijo.etiqueta , unaLista)
+        Fin para cada
+    Fin si
+FIN

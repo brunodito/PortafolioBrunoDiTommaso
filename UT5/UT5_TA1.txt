@@ -1,0 +1,20 @@
+Precondiciones: El arbol debe existir, es decir que no este vacio. La etiqueta que se pase debe ser un valor valido.
+
+Postcondiciones: Devolver la etiqueta en el caso que se encuentre o nulo en caso de que no. Al ejecutar el metodo no se debe modificar la estructura del arbol ni de sus nodos.
+
+El objetivo del algoritmo Buscar(unaEtiqueta) es localizar y devolver el nodo dentro del árbol que contenga una etiqueta específica. Para lograr esto, se debe recorrer el árbol a partir de su raíz y seguir una estrategia de recorrido que permita visitar todos los nodos. Dado que cada nodo tiene referencias a su primer hijo y a su hermano derecho, se puede aplicar una búsqueda  tal que asi:
+
+El recorrido funciona así:
+
+Se comienza en el nodo raíz del árbol.
+
+En cada nodo, se verifica si su etiqueta coincide con la etiqueta buscada:
+
+Si coincide, se devuelve ese nodo.
+
+Si no coincide, se intenta buscar recursivamente en su primer hijo.
+
+Si no se encuentra en el hijo, se continúa la búsqueda recursivamente por el hermano derecho.
+
+Si se agotan todos los nodos sin encontrar la etiqueta buscada, se devuelve nulo (o null), indicando que no existe un nodo con esa etiqueta.
+

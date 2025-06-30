@@ -1,0 +1,12 @@
+Ejercicio 1-
+
+"No, yo pac."
+"Vos zacata pac."
+"pac."
+"Yo pac."
+
+Ejercicio 2-
+
+sipo ("traqueteo", 13)
+
+

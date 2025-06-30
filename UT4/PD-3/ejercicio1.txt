@@ -1,0 +1,56 @@
+1. Descripción en lenguaje natural:
+
+El algoritmo tiene como objetivo insertar un nuevo nodo en un Árbol Binario de Búsqueda. Comienza en la raíz del árbol y 
+compara la clave del nuevo nodo con la del nodo actual. Si la clave es menor, continúa por el subárbol izquierdo, 
+si es mayor, por el derecho. Este proceso se repite recursivamente hasta encontrar una posición vacía (nodo nulo), 
+donde se inserta el nuevo nodo.
+
+2. Precondiciones y postcondiciones:
+
+Precondiciones)
+
+-El árbol no debe estar vacio.
+-El nodo a insertar contiene una clave válida comparable.
+
+Postcondiciones)
+
+-El árbol contiene el nuevo nodo en la posición correcta según las reglas del ABB (claves menores a la izquierda, mayores a la derecha).
+-No se insertan nodos duplicados (si la clave ya existe, no se realiza la inserción).
+
+3. Pseudocodigo:
+
+Parte del Árbol (TArbolBB)-
+
+insertarNodo(nuevoNodo)
+COM
+    SI raiz ES NULO ENTONCES
+        raiz ← nuevoNodo
+    SINO
+        raiz.insertar(nuevoNodo)
+    FIN SI
+FIN
+
+Parte del Nodo (TElementoAB)-
+
+insertar(nuevoNodo)
+COM
+    SI nuevoNodo.clave < clave ENTONCES
+        SI hijoIzquierdo ES NULO ENTONCES
+            hijoIzquierdo ← nuevoNodo
+        SINO
+            hijoIzquierdo.insertar(nuevoNodo)
+        FIN SI
+    SINO SI nuevoNodo.clave > clave ENTONCES
+        SI hijoDerecho ES NULO ENTONCES
+            hijoDerecho ← nuevoNodo
+        SINO
+            hijoDerecho.insertar(nuevoNodo)
+        FIN SI
+    FIN SI
+FIN
+
+4. Análisis del orden del tiempo de ejecución:
+
+O(log n).
+
+

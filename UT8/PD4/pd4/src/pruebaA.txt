@@ -1,0 +1,15 @@
+cc1,cc2,5
+cc1,cc3,7
+cc1,cc4,3
+cc1,cc5,9
+cc1,cc6,4
+cc2,cc3,3
+cc2,cc4,5
+cc2,cc5,7
+cc2,cc6,8
+cc3,cc4,4
+cc3,cc5,5
+cc3,cc6,7
+cc4,cc5,9
+cc4,cc6,3
+cc5,cc6,6

@@ -1,0 +1,53 @@
+1. Descripción en lenguaje natural:
+
+El algoritmo debe contar cuántas hojas tiene el Árbol Binario de Búsqueda. Una hoja es un nodo que no tiene hijos ni a la der ni a la izq. 
+El recorrido se realiza en forma recursiva desde la raíz. Si un nodo es una hoja, se suma uno. Si no lo es, se cuenta recursivamente en los subárboles izq y der.
+
+2. Precondiciones y postcondiciones:
+
+Precondiciones)
+
+-El árbol no debe estar vacio.
+
+Postcondiciones)
+
+-Se devuelve la cantidad total de nodos que no tienen hijos.
+
+3. Seudocódigo formal:
+
+Parte del Árbol (TArbolBB)-
+
+contarHojas() : ENTERO
+COM
+    SI raiz ES NULO ENTONCES
+        RETORNAR 0
+    SINO
+        RETORNAR raiz.contarHojas()
+    FIN SI
+FIN
+
+Parte del Nodo (TElementoAB)-
+
+contarHojas() : ENTERO
+COM
+    SI hijoIzquierdo ES NULO Y hijoDerecho ES NULO ENTONCES
+        RETORNAR 1
+    FIN SI
+
+    hojasIzq ← 0
+    hojasDer ← 0
+
+    SI hijoIzquierdo NO ES NULO ENTONCES
+        hojasIzq ← hijoIzquierdo.contarHojas()
+    FIN SI
+
+    SI hijoDerecho NO ES NULO ENTONCES
+        hojasDer ← hijoDerecho.contarHojas()
+    FIN SI
+
+    RETORNAR hojasIzq + hojasDer
+FIN
+
+4. Análisis del orden del tiempo de ejecución:
+
+O(n)

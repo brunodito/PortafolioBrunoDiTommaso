@@ -1,0 +1,17 @@
+Ejercicio #3 
+
+Dado un árbol binario de búsqueda inicialmente vacío, realiza las siguientes operaciones:
+    1. Inserta las claves 12, 25, 14, 1, 33, 88, 45, 2, 7, 66,5, 99
+        a. Escribe los recorridos en Preorden, Inorden y Postorden
+    2. A partir del árbol final, elimina (dibujando paso a paso) las siguientes claves: 99, 2, 12, 33
+        a. Escribe los recorridos en Preorden, Inorden y Postorden
+
+1)
+-Preorden (Raíz - Izq - Der): 12, 1, 2, 7, 5, 25, 14, 33, 88, 45, 66, 99
+-Inorden (Izq - Raíz - Der): 1, 2, 5, 7, 12, 14, 25, 33, 45, 66, 88, 99
+-Postorden (Izq - Der - Raíz): 5, 7, 2, 1, 14, 45, 66, 99, 88, 33, 25, 12
+
+2)
+-Preorden (Raíz - Izq - Der): 14, 1, 7, 5, 25, 88, 45, 66
+-Inorden (Izq - Raíz - Der): 1, 5, 7, 14, 25, 45, 66, 88
+-Postorden (Izq - Der - Raíz): 5, 7, 1, 66, 45, 88, 25, 14

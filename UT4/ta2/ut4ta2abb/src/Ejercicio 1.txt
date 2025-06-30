@@ -1,0 +1,68 @@
+Subequipo A:
+1)
+Precondiciones: 
+Postcondiciones:
+-El arbol no se ve modificado
+-Si es un arbol vacío, la altura que devuelve es 0
+-Si el arbol no esta vacío devuelve la altura del arbol
+
+2)
+-Se crea un arbol de una altura determinada, se guarda el inorden y postorden en dos variables, se invoca el método desde el arbol, y se observa que la altura devuelta es la correcta, y que el inorden y postorden sigue siendo el mismo (esto nos confirma que las claves no fueron modificadas).
+-Se invoca el método en un arbol vacío, y se observa que la altura devuelta sea 0, y que el arbol sigue vacío.
+
+3)
+void testAlturaArbolNoVacio
+	arbol = nuevo ArbolBB
+	arbol.insertar 3
+	arbol.insertar 5
+	arbol.insertar 7
+	inordenOriginal = arbol.inOrden
+	postordenOriginal = arbol.postOrden
+	resultadoEsperado = 2
+	Assert arbol.getAltura == resultadoEsperado
+	Assert arbol.inOrden == inordenOriginal
+	Assert arbol.postOrden == postordenOriginal
+
+void testAlturaArbolVacio
+	arbol = nuevo ArbolBB
+	resultadoEsperado = 0
+	Assert arbol.getAltura == resultadoEsperado
+	Assert arbol.esVacio == true
+	
+
+Subequipo B:
+1)
+Precondiciones: 
+
+Postcondiciones: 
+--> Devuelve el tamaño del arbol binario de busqueda:
+Si la raíz del árbol es null (el árbol está vacío), el algoritmo debe devolver 0
+Si la raíz != null (no es vacío), el algoritmo va a devolver el valor del tamaño del árbol. 
+
+Lenguaje natural:
+
+El algoritmo a desarrollar nos va a permitir calcular, a partir de la raíz, el número de nodos en el árbol incluída la raíz. 
+Primero verifica si la raíz del árbol es == null, en ese caso, el algoritmo va a retornar 0.
+En caso contrario, calcula recursivamente el tamañoi del subarbol izquierdo y derecho y suma 1, para incluir el nodo actual, a la suma de los tamaños de ambos subárboles. 
+
+Seudocódigo:
+Funcion tamanio () -> entero
+	Si raiz es null entonces
+		devolver 0
+	Sino 
+		devolver 1+tamanio(hijoIzquierdo) + tamanio(hijoDerecho)
+	Fin si
+Fin funcion.
+
+Casos de prueba: 
+ A) Prueba de árbol vacío:
+Entrada: null 
+Salida: 0
+
+B) Árbol de un solo nodo:
+Entrada: Nodo raíz (único nodo)
+Salida: 1
+
+C) Árbol con varios nodos: 
+Entrada: Nodo raíz
+Salida: Suma total de los nodos

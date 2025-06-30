@@ -1,0 +1,9 @@
+public void imprimirCamino(Map<TVertice, TVertice> predecesores, TVertice inicial, TVertice destino){ 
+     String camino = "";
+     TVertice actual = destino;
+     do{
+         camino += predecesores.get(actual).getEtiqueta() + ", ";
+         actual = predecesores.get(actual);
+     }while(actual != destino);
+     System.out.println(camino);
+} 

@@ -1,0 +1,55 @@
+1. Descripción en lenguaje natural:
+
+Este algoritmo cuenta cuántos nodos hay en un nivel específico de un Árbol Binario de Búsqueda (ABB). 
+Se realiza un recorrido recursivo, pasando como parámetro el nivel actual del nodo. Cuando el nivel actual coincide 
+con el nivel buscado, se suma 1. La búsqueda continúa por ambos subárboles.
+
+2. Precondiciones y postcondiciones:
+
+Precondiciones)
+
+-El árbol puede estar vacío o no.
+-El nivel buscado es un número entero no negativo.
+
+Postcondiciones)
+
+-Se devuelve la cantidad de nodos que se encuentran en el nivel especificado (nivel raíz = 0).
+
+3. Seudocódigo formal:
+
+Parte del Árbol (TArbolBB)-
+
+contarNodosEnNivel(nivelBuscado : ENTERO) : ENTERO
+COM
+    SI raiz ES NULO ENTONCES
+        RETORNAR 0
+    SINO
+        RETORNAR raiz.contarNodosEnNivel(nivelBuscado, 0)
+    FIN SI
+FIN
+
+Parte del Nodo (TElementoAB)-
+
+contarNodosEnNivel(nivelBuscado : ENTERO, nivelActual : ENTERO) : ENTERO
+COM
+    SI nivelActual = nivelBuscado ENTONCES
+        RETORNAR 1
+    FIN SI
+
+    cantIzq ← 0
+    cantDer ← 0
+
+    SI hijoIzquierdo NO ES NULO ENTONCES
+        cantIzq ← hijoIzquierdo.contarNodosEnNivel(nivelBuscado, nivelActual + 1)
+    FIN SI
+
+    SI hijoDerecho NO ES NULO ENTONCES
+        cantDer ← hijoDerecho.contarNodosEnNivel(nivelBuscado, nivelActual + 1)
+    FIN SI
+
+    RETORNAR cantIzq + cantDer
+FIN
+
+4. Análisis del orden del tiempo de ejecución:
+
+O(n)

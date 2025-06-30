@@ -1,0 +1,51 @@
+1. Descripción en lenguaje natural:
+
+Este algoritmo recorre todos los nodos del Árbol Binario de Búsqueda para calcular la suma total de las claves almacenadas. Se usa un recorrido recursivo
+(por ejemplo, inorden, aunque el orden no afecta el resultado en este caso), sumando la clave del nodo actual con las sumas obtenidas recursivamente del subárbol 
+izquierdo y del subárbol derecho.
+
+2. Precondiciones y postcondiciones:
+
+Precondiciones)
+
+-El árbol no debe estar vacio.
+-Las claves de los nodos son enteros.
+
+Postcondiciones)
+
+-Se devuelve la suma total de todas las claves del árbol.
+
+3. Seudocódigo formal:
+
+Parte del Árbol (TArbolBB)-
+
+sumarClaves() : ENTERO
+COM
+    SI raiz ES NULO ENTONCES
+        RETORNAR 0
+    SINO
+        RETORNAR raiz.sumarClaves()
+    FIN SI
+FIN
+
+Parte del Nodo (TElementoAB)-
+
+sumarClaves() : ENTERO
+COM
+    sumaIzq ← 0
+    sumaDer ← 0
+
+    SI hijoIzquierdo NO ES NULO ENTONCES
+        sumaIzq ← hijoIzquierdo.sumarClaves()
+    FIN SI
+
+    SI hijoDerecho NO ES NULO ENTONCES
+        sumaDer ← hijoDerecho.sumarClaves()
+    FIN SI
+
+    RETORNAR clave + sumaIzq + sumaDer
+FIN
+
+4. Análisis del orden del tiempo de ejecución:
+
+O(n)
